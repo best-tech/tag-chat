@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Чат по тэгу
+title: Все комментарии
 ---
 
 <script type="text/javascript">
@@ -16,10 +16,9 @@ title: Чат по тэгу
 
     <div id="vk_comments"></div>
     <script type="text/javascript">
-      VK.Widgets.Comments(
+      VK.Widgets.CommentsBrowse (
         'vk_comments',
-        { limit: 100,
-          attach: "photo"},
+        { limit: 100},
       );
     </script>
 
