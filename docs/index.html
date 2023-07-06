@@ -3,13 +3,26 @@ layout: default
 title: Чат по тэгу
 ---
 
-{% include vk_init.html %}
+{% include vk_comments.html %}
 
 <div id="vk_comments" class="mt-1"></div>
+
 <script type="text/javascript">
-  VK.Widgets.Comments(
-    'vk_comments',
-    { limit: 100,
-      attach: "photo"},
-  );
+  window.onload = function () {
+
+    VK.init({
+      apiId: 51583706,
+      onlyWidgets: true
+    });
+
+    VK.Widgets.Comments(
+      'vk_comments',
+      {
+        limit: 100,
+        attach: "photo"
+      },
+      321
+    );
+
+  }
 </script>
