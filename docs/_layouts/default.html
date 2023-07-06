@@ -1,20 +1,15 @@
 <!DOCTYPE html>
-<html class="h-100">
+<html lang="ru" class="h-100">
   {% include head.html %}
   <body class="h-100">
-    <div class="page-content h-100">
-      <div class="container h-100">
-        <div class="three columns">
-          {% include header.html %}
-        </div>
-
-        <div class="nine columns">
-          <div class="wrapper">
-            {{ content }}
-          </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <div class="container h-100">
+      {% include header.html %}
+      <div class="row">
+        <div class="col">
+          {{ content }}
         </div>
       </div>
-      <!-- {% include footer.html %}  -->
     </div>
   </body>
 </html>

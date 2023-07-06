@@ -1,26 +1,16 @@
 ---
 layout: default
 title: Все комментарии
+tag-description: Все комментарии
 ---
 
+{% include vk_init.html %}
+
+<div id="vk_comments" class="mt-1"></div>
 <script type="text/javascript">
-  VK.init({
-    apiId: 51583706,
-    onlyWidgets: true
-  });
+  VK.Widgets.CommentsBrowse (
+    'vk_comments',
+    { limit: 100},
+  );
 </script>
 
-<div class="home">
-  <div class="post-list">
-
-
-    <div id="vk_comments"></div>
-    <script type="text/javascript">
-      VK.Widgets.CommentsBrowse (
-        'vk_comments',
-        { limit: 100},
-      );
-    </script>
-
-  </div>
-</div>

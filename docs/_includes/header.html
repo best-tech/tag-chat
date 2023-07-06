@@ -1,16 +1,31 @@
-<header class="site-header">
-
-  <h2 class="logo"><a href="{{ site.baseurl }}/">{{ page.title }}</a></h2>
-
-  <div class="nav">
-    <!-- <div class="site-nav">
-      <nav>
-        <ul class="page-link">
-          <li><a href="{{ "/" | prepend: site.baseurl }}">Home</a></li>
-          <li><a href="{{ "/archive" | prepend: site.baseurl }}">Posts</a></li>
-          <li><a href="{{ "/about" | prepend: site.baseurl }}">About</a></li>
-        </ul>
-      </nav>
-    </div> -->
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">tag-chat.ru</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Главная
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/all">Все комментарии</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Поделиться</a>
+        </li>
+      </ul>
+      
+    </div>
   </div>
-</header>
+</nav>
+
+<div class="input-group mt-1">
+  <span class="input-group-text">#</span>
+  <input type="text" class="form-control"  placeholder="Начните вводить">
+  
+</div>
+<small class="form-text" id="tag-description">{{ page.tag-description }}</small>
